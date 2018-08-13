@@ -1,0 +1,33 @@
+﻿﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    	div {
+            background-color: #CCC;
+            border: 1px solid #DDD;
+            float:left;
+            width: 60px;
+            height:60px;
+            margin: 2%;
+            text-align: center;
+			overflow:hidden;
+			padding: 2px;
+        }
+		div > * {
+
+		padding:0;
+margin: auto;
+text-align:center
+}
+    </style>
+</head>
+﻿<body>
+<script>
+function s() {
+  for (let i = 0; i < 50000; i++) {
+    document.write("<div>"+"<p>"+String.fromCharCode(i)+"</p>"+"<small>"+i+"</small>"+"</div>")
+  }
+}
+s()
+</script>
+</html>

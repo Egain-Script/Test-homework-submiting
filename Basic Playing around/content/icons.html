@@ -1,0 +1,46 @@
+<html>
+  <style>
+    * {
+      box-sizing: border-box
+    }
+    ul {
+      list-style: none;
+      text-align: center;
+      display: block;
+      overflow: hidden;
+    }
+    li {
+      float: left;
+      width: 50px;
+      height: 75px;
+      background-color: #DDD;
+      margin: 7px 5px;
+      padding: 2px;
+      overflow: hidden;
+    }
+    p {
+      background-color: #000;
+      color: #FFF;
+    }
+  </style>
+</head>
+<body>
+  <ul id="ul"></ul>
+  <script>
+    let ul = document.getElementById("ul")
+    function printChars(num, callbackFunc){
+      for (let i = 0; i < num; i++) {
+        implement({icon: callbackFunc(i), tag: i})
+      }
+    }
+    function implement(item) {
+        let li = document.createElement("li")
+        let p = document.createElement("p")
+        li.textContent = item.icon
+        p.textContent = item.tag
+        ul.appendChild(li)
+        li.appendChild(p)
+    }
+    printChars(10000, String.fromCharCode)
+  </script>
+</html>
