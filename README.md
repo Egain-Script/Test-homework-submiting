@@ -1,1 +1,1 @@
-# test-homework-submiting
+# This is my Awesome Readme curriculum
